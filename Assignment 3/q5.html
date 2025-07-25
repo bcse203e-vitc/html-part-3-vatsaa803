@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online Event Registration</title>
+    
+</head>
+<body>
+    <form action="#" method="post" novalidate>
+        <h2>Online Event Registration</h2>
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="example@example.com" />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9+\-\s]{7,15}" placeholder="+1234567890" />
+
+        <label>Gender</label>
+        <div class="gender-options">
+            <label><input type="radio" name="gender" value="male" required /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+            <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+
+        <label for="agegroup">Age Group</label>
+        <select id="agegroup" name="agegroup" required>
+            <option value="" disabled selected>Select your age group</option>
+            <option value="under18">Under 18</option>
+            <option value="18-25">18 - 25</option>
+            <option value="26-35">26 - 35</option>
+            <option value="36-50">36 - 50</option>
+            <option value="51plus">51+</option>
+        </select>
+
+        <label>Topics of Interest</label>
+        <div class="topics-options">
+            <label><input type="checkbox" name="topics" value="technology" /> Technology</label>
+            <label><input type="checkbox" name="topics" value="health" /> Health</label>
+            <label><input type="checkbox" name="topics" value="education" /> Education</label>
+            <label><input type="checkbox" name="topics" value="business" /> Business</label>
+            <label><input type="checkbox" name="topics" value="entertainment" /> Entertainment</label>
+        </div>
+
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" placeholder="Your comments here..."></textarea>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

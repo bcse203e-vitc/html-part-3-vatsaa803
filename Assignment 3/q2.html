@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Online Event Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .radio-group,
+  .checkbox-group {
+    margin-top: 5px;
+  }
+  .radio-group label,
+  .checkbox-group label {
+    font-weight: normal;
+    margin-right: 15px;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Online Event Registration</h2>
+  <form action="#" method="post" novalidate>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="example@domain.com" />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9+\\- ]{7,15}" placeholder="+1234567890" />
+
+    <label>Gender:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="gender" value="Male" required /> Male</label>
+      <label><input type="radio" name="gender" value="Female" /> Female</label>
+      <label><input type="radio" name="gender" value="Other" /> Other</label>
+    </div>
+
+    <label for="agegroup">Age Group:</label>
+    <select id="agegroup" name="agegroup" required>
+      <option value="" disabled selected>Select your age group</option>
+      <option value="Under 18">Under 18</option>
+      <option value="18-30">18-30</option>
+      <option value="31-50">31-50</option>
+      <option value="51+">51+</option>
+    </select>
+
+    <label>Topics of Interest:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="topics" value="Technology" /> Technology</label>
+      <label><input type="checkbox" name="topics" value="Health" /> Health</label>
+      <label><input type="checkbox" name="topics" value="Education" /> Education</label>
+      <label><input type="checkbox" name="topics" value="Business" /> Business</label>
+    </div>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" placeholder="Your comments here..."></textarea>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+</body>
+</html>
